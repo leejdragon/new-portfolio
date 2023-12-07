@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>이정용 포트폴리오</title>
   <link rel="stylesheet" href="/portfolio/common/index.css">
   <link rel="stylesheet" href="/portfolio/common/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+  <script src="/portfolio/common/index.js"></script>
+
 </head>
+
 <body>
 
   <!-- 헤더 영역 -->
@@ -24,9 +33,175 @@
           <li class="nav_item"><a href="#contact" class="nav_link">Contact</a></li>
         </ul>
       </div>
-      
+
     </nav>
   </header>
-  
+
+  <!-- 메인 영역 -->
+  <section class="home">
+    <!-- <div class="home_data">
+      <h1 class="home_title">Hi,<br>I'am <span class="home_title_color">JeongYong</span><br> Publisher</h1>
+
+      <a href="" class="button">Contact</a>
+    </div> -->
+
+    <div class="home_data">
+      <ul class="slider">
+        <li class="img_01">
+          <h1 class="home_title">Hi,<br>I'am <span class="home_title_color">JeongYong</span><br> Publisher</h1>
+        </li>
+        <li class="img_02">
+          <h1 class="home_title">Hi,<br>I'am <span class="home_title_color">JeongYong</span><br> Publisher</h1>
+        </li>
+        <li class="img_03">
+          <h1 class="home_title">Hi,<br>I'am <span class="home_title_color">JeongYong</span><br> Publisher</h1>
+        </li>
+      </ul>
+    </div>
+
+    <div class="btn">
+      <a href="" class="button">Contact</a>
+    </div>
+
+    <!-- <div class="home_social">
+      <a href="" class="home_social-icon"><i class='bx bxl-linkedin'></i></a>
+      <a href="" class="home_social-icon"><i class='bx bxl-instagram'></i></a> <box-icon type='logo'
+        name='instagram'></box-icon>
+      <a href="https://github.com/leejdragon" class="home__social-icon" target="_blank"><i
+          class='bx bxl-github'></i></a>
+    </div> -->
+
+    <!-- <div class="home_img">
+      <ul class="slider">
+        <li><img class="home_blob_img" src="../assets/html_img.png" /></li>
+        <li><img class="home_blob_img" src="../assets/css_img.png" /></li>
+        <li><img class="home_blob_img" src="../assets/js_img.png" /></li>
+      </ul>
+    </div> -->
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section " id="about">
+    <h2 class="section-title">About</h2>
+
+    <div class="about__container bd-grid">
+      <!-- <div class="about__img">
+        <img src="../assets/emoji.jpg" alt="">
+      </div> -->
+
+      <div>
+        <h2 class="about__subtitle">I'am JeongYong</h2>
+        <p class="about__text">high level experience in web frontend and <br> development knowledge, producing <br>
+          quality work.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills__container bd-grid">
+      <div>
+        <h2 class="skills__subtitle">Profesional Skills</h2>
+        <p class="skills__text">I learned JAVA at academy and studied Vue.js, a front-end framework by myself.</p>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxl-html5 skills__icon'></i>
+            <span class="skills__name">HTML5</span>
+          </div>
+          <div class="skills__bar skills__html">
+
+          </div>
+          <div>
+            <span class="skills__percentage">95%</span>
+          </div>
+        </div>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxl-css3 skills__icon'></i>
+            <span class="skills__name">CSS3</span>
+          </div>
+          <div class="skills__bar skills__css">
+
+          </div>
+          <div>
+            <span class="skills__percentage">85%</span>
+          </div>
+        </div>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxl-javascript skills__icon'></i>
+            <span class="skills__name">JAVASCRIPT</span>
+          </div>
+          <div class="skills__bar skills__js">
+
+          </div>
+          <div>
+            <span class="skills__percentage">65%</span>
+          </div>
+        </div>
+        <div class="skills__data">
+          <div class="skills__names">
+            <i class='bx bxl-vuejs skills__icon'></i>
+            <span class="skills__name">Vue.js</span>
+          </div>
+          <div class="skills__bar skills__ux">
+
+          </div>
+          <div>
+            <span class="skills__percentage">85%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div>
+        <img src="../assets/notebook.png" alt="" class="skills__img">
+      </div> -->
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work section" id="work">
+    <h2 class="section-title">Work</h2>
+
+    <div class="work__container bd-grid">
+      <!-- <a href="" class="work__img">
+        <img src="../assets/work1.png" alt="">
+      </a>
+      <a href="" class="work__img">
+        <img src="../assets/work2.png" alt="">
+      </a>
+      <a href="" class="work__img">
+        <img src="../assets/work3.png" alt="">
+      </a>
+      <a href="" class="work__img">
+        <img src="../assets/work4.png" alt="">
+      </a>
+      <a href="" class="work__img">
+        <img src="../assets/work5.png" alt="">
+      </a>
+      <a href="" class="work__img">
+        <img src="../assets/work6.png" alt="">
+      </a> -->
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <!-- <section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact__container bd-grid">
+      <form action="" class="contact__form">
+        <input type="text" placeholder="Name" class="contact__input">
+        <input type="mail" placeholder="Email" class="contact__input">
+        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+        <input type="button" value="Send" class="contact__button button">
+      </form>
+    </div>
+  </section> -->
+
 </body>
+
 </html>
