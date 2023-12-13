@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 @font-face {
   font-family: 'GmarketSansMedium';
@@ -11,6 +11,8 @@
 body {
   /* background: linear-gradient(#E44D26 50%, #ffffff 50%); */
   font-family: 'Poppins', sans-serif !important;
+  font-weight: 400;
+  color: #0d1730;
 }
 
 a {
@@ -23,6 +25,10 @@ p {
 
 .medium {
   font-weight: 400;
+}
+
+.semibold {
+  font-weight: 600;
 }
 
 .bold {
@@ -204,7 +210,104 @@ img {
 .about .about_container div:nth-child(2) .about_text {line-height: 24px; animation: slide 2s ease-in-out;}
 
 
+/* skills 부분 */
+.skills .skills_container {
+  grid-template-columns: repeat(1, 1fr);
+  align-items: center;
+  text-align: initial;
+  column-gap: 70px;
+  display: grid;
+  width: 800px;
+  margin: 0 auto;
+}
+.skills .skills_container .skills_subtitle {
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 16px;
+}
 
+.skills .skills_container .skills_text {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 32px;
+  line-height: 24px;
+}
+
+.skills_data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  margin-bottom: 32px;
+}
+.skills_names {
+  display: flex;
+  align-items: center;
+}
+.skills_icon {
+  font-size: 35px;
+  margin-right: 20px;
+}
+
+.skills_bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #3e6ff4;
+  height: 0.25rem;
+  border-radius: 0.5rem;
+  z-index: var(--z-back);
+  /* animation: progress 0.8s ease-in-out forwards; */
+}
+
+.skills_html {
+  width: 95%;
+}
+
+.skills_css {
+  width: 85%;
+}
+
+.skills_js {
+  width: 65%;
+}
+
+.skills_jquery {
+  width: 85%;
+}
+
+.bxl-html5 {
+  color: orangered;
+}
+
+.bxl-css3 {
+  color: blue;
+}
+
+.bxl-javascript {
+  color: rgb(236, 221, 13);
+}
+
+.bxl-jquery {
+  color: #0167ae;
+}
+
+.bx {
+  font-family: 'boxicons'!important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  display: inline-block;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* bxslide 부분 */
 .slider {
   z-index: 1;
 }
@@ -260,6 +363,16 @@ img {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
