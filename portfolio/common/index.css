@@ -192,13 +192,6 @@ img {
   display: grid;
 }
 
-.about .about_container .about_img img {
-  width: 496px;
-  border-radius: 10px;
-  animation: scale 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation-delay: 1s;
-}
-
 .about .about_container div:nth-child(2) .about_subtitle {
   position: relative;
   font-size: 24px;
@@ -209,16 +202,125 @@ img {
 
 .about .about_container div:nth-child(2) .about_text {line-height: 24px; animation: slide 2s ease-in-out;}
 
+/* 명함 부분 */
+.business_card {
+  width: 477px;
+  height: 200px;
+  position: relative;
+  
+}
+.business_card .front ,
+.business_card .back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+.business_card .front {
+  background-color: #242424;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+ .business_card:hover .front {
+  transform: perspective(700px) rotateY(180deg)
+}
+
+.business_card .front .representative {
+  font-size: 32px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+.business_card .front::before {
+  content: "";
+  border-radius: 50%;
+  border: 8px solid #dad0d020;
+  position: absolute;
+  top: -25%;
+  height: 150%;
+  width: 320px;
+  transform: rotateY(35deg);
+}
+
+.business_card .back {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242424;
+  transform: perspective(700px) rotateY(-180deg);
+}
+
+.business_card:hover .back {
+  transform: perspective(700px) rotateY(0deg);
+}
+
+.business_card .back .image,
+.business_card .back .info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.business_card .back .image {
+  border-top-right-radius: 50%;
+  border-top-left-radius: 100%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 100%;
+  background-color: #fff;
+  color: #242424;
+  align-items: center;
+}
+.business_card .back .image img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border: 2px solid #242424;
+  border-radius: 50%;
+  padding: 4px;
+  margin-bottom: 16px;
+}
+
+.business_card .back .image h1 {
+  font-size: 18px;
+  margin-block: 8px;
+}
+.business_card .back .image h2 {
+  font-size: 16px;
+  margin-block: 8px;
+} 
+
+.business_card .back .info {
+  align-items: flex-start;
+  color: #fff;
+}
+
+.business_card .back .info .contact {
+  line-height: 24px;
+  margin-block: 8px;
+  font-size: 14px;
+}
+
+.business_card .back .info .contact i {
+  font-size: 18px;
+  margin-right: 16px;
+}
 
 /* skills 부분 */
 .skills .skills_container {
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   text-align: initial;
   column-gap: 70px;
   display: grid;
-  width: 800px;
-  margin: 0 auto;
 }
 .skills .skills_container .skills_subtitle {
   font-size: 24px;
@@ -307,6 +409,71 @@ img {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.skills_img img {
+  width: 496px;
+  border-radius: 10px;
+  /* animation: scale 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation-delay: 1s; */
+}
+
+
+/* WORK 부분 */
+.work_container {
+  row-gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  text-align: initial;
+  column-gap: 70px;
+  display: grid;
+}
+
+.work_img {
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.work_img img {
+  transition: 1s;
+  max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.work_img img:hover {
+  transform: scale(1.1);
+}
+
+/* 푸터 영역 */
+.footer {
+  background-color: #0d1730;
+  color: #fff;
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 2rem 0;
+  margin-top: 48px;
+}
+
+.footer_title {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.footer_social {
+  margin-bottom: 32px;
+}
+
+.footer_icon {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 var(--mb-2);
+}
+
+.footer_copy {
+  font-size: var(--smaller-font-size);
+}
+
+
 /* bxslide 부분 */
 .slider {
   z-index: 1;
@@ -334,14 +501,20 @@ img {
   background-size: cover;
 }
 
-
-
-
-
 .bx-wrapper {
   border: none !important;
 }
 
+.top {
+  position: fixed;
+  z-index: 99;
+  bottom: 60px;
+  right: 160px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  background-image: url(/portfolio/assets/top_btn.png);
+}
 
 @keyframes slide {
   from {
